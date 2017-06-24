@@ -148,6 +148,8 @@ main div.highlight {
 main pre {
   margin: 0;
   padding: 12px;
+  font-size: 12pt;
+  background-color: #f1f1f1;
 }
 
 
