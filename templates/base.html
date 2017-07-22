@@ -2,6 +2,11 @@
 <html lang="{{ DEFAULT_LANG }}">
 <head>
     {% block head %}
+     <!-- Meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="{{ SITETITLE }}" />
+    
     <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
 
     {% if FEED_ALL_ATOM %}
@@ -41,11 +46,6 @@
     <!-- JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="{{ SITEURL }}/theme/js/jqcloud.min.js"></script>
-
-     <!-- Meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="{{ SITETITLE }}" />
     {% endblock head %}
 </head>
 <body>

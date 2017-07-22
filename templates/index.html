@@ -30,7 +30,7 @@
       </span>
     </div>
     {% if article.tags %}
-    <div id="article-tags" class="w3-margin-right">
+    <div class="article-tags" class="w3-margin-right">
       {% for tag in article.tags %}
       <span class="w3-tag w3-light-grey w3-text-red w3-hover-red">
         <a href="{{ SITEURL }}/{{ tag.url }}" title="Alle Posts zum Thema {{ tag.name.title() }}">#{{ tag }}</a>
