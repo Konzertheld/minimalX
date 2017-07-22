@@ -1,7 +1,7 @@
 body {
   margin: 0px;
   padding: 0px;
-  background-color: #fcfcfc;
+  background-color: #55aa55;
   font-family: 'Open Sans', sans-serif;
   font-size: 12pt;
 }
@@ -104,7 +104,7 @@ ul.social li a:hover {
 .col-main {
   margin: auto;
   width: 100%;
-  max-width: 900px;
+  max-width: 1100px;
 }
 
 .adjust-width {

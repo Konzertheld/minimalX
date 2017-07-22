@@ -40,10 +40,14 @@
     {% endif %}
   </div>
 </header>
+  {% if article.summary|length > 100 %}
   <div class="entry-content">{{article.summary}}</div>
   <footer>
   <a class="w3-btn w3-red w3-right w3-margin" href="{{ SITEURL }}/{{ article.url }}">Weiterlesen &#10093;</a>
   </footer>
+  {% else %}
+  <div class="entry-content">{{article.content}}</div>
+  {% endif %}
 </article>
 <br>
 <br>
