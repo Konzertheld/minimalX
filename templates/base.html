@@ -49,15 +49,20 @@
     {% endblock head %}
 </head>
 <body>
-  <div class="w3-row w3-card w3-white">
-    <header id=banner>
+  <div class="w3-row">
+    <header id="banner" class="w3-white">
        <!-- AUTHOR INITIALS-->
       <a href="{{ SITEURL }}" id=logo title="Home">{{ AUTHOR[0] + AUTHOR[AUTHOR.index(" ")+1] }}</a>
+      <ul class="social" style="margin: 0; margin-top: 10px; padding: 0;">
+        {% for name, link in SOCIAL %}
+        <li><a class="sc-{{ name }}" href="{{ link }}" target="_blank"><i class="fa fa-{{ name }}"></i></a></li>
+        {% endfor %}
+      </ul>
       <nav id="menu">
         <ul>
           {% if DISPLAY_PAGES_ON_MENU %}
           {% for p in pages %}
-          <li{% if p==page %} class="active" {% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+          <li class="w3-bottombar w3-border-white w3-hover-border-red {% if p==page %} active{% endif %}"><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
           {% endfor %}
           {% endif %}
           {% if DISPLAY_CATEGORIES_ON_MENU %}
