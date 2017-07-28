@@ -65,7 +65,6 @@ nav {
 
 nav ul {
   padding: 0;
-  margin-top: 10px;
   margin-bottom: 0;
   line-height: 1.5;
   display: flex;
@@ -302,10 +301,15 @@ div#contact ul li {
   height: 30vw;
 }
 
+#sitename {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 40pt;
+}
+
 #sitedescription {
   font-family: 'Open Sans', sans-serif;
-  font-style: italic;
-  font-size: 11pt;
+  font-size: 20pt;
+  color: #8f0222;
 }
 
 
@@ -313,9 +317,10 @@ div#contact ul li {
   display: flex;
   align-items: center;
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 1100px;
   justify-content: center;
   flex-wrap: wrap;
+  padding-bottom: 15px;
 }
 
 #tagcloud {
@@ -353,7 +358,6 @@ div#contact ul li {
 
   nav ul {
       flex-direction: row;
-      margin-top: 24px;
   }
 
   article {
