@@ -22,6 +22,7 @@
 <article class="w3-container w3-card-2 w3-white col-main">
   <header class="w3-container col-main">
     <h1>{{ article.title }}</h1>
+    {% block postinfo %}
     <div class="post-info">
       <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
         <span>Gepostet am <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time> in <i><a href="{{ SITEURL }}/{{ article.category.url }}" title="Alle Artikel der Kategorie {{ article.category }}">{{ article.category }}</a></i>
@@ -37,6 +38,7 @@
       </div>
       {% endif %}
     </div>
+    {% endblock %}
   </header>
   <br>
   {% if article.headerimage %}
@@ -48,7 +50,7 @@
   </div>
   {% endif %}
   <div class="col-main w3-container">
-    <main id="article-content">
+    <main class="entry-content">
       {{article.content}}
     </main>
     <br>
