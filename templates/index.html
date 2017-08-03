@@ -32,7 +32,7 @@
       </span>
     </div>
     {% if article.tags %}
-    <div class="w3-margin-right article-tags">
+    <div class="w3-margin-right w3-margin-bottom article-tags">
       {% for tag in article.tags %}
       <span class="w3-tag w3-light-grey w3-text-red w3-hover-red">
         <a href="{{ SITEURL }}/{{ tag.url }}" title="Alle Posts zum Thema {{ tag.name.title() }}">#{{ tag }}</a>
@@ -42,7 +42,8 @@
     {% endif %}
   </div>
 </header>
-  {% if article.summary|length > 100 %}
+<main>
+  {% if article.summary|length > 400 %}
   <div class="entry-content">{{article.summary}}</div>
   <footer>
   <a class="w3-btn w3-red w3-right w3-margin" href="{{ SITEURL }}/{{ article.url }}">Weiterlesen &#10093;</a>
@@ -50,8 +51,8 @@
   {% else %}
   <div class="entry-content">{{article.content}}</div>
   {% endif %}
+</main>
 </article>
-<br>
 <br>
 <br>
 {% if loop.index==1 %}
@@ -66,8 +67,6 @@
 {% endfor %}
 {% if articles_page.has_other_pages() %}
 {% include 'pagination.html' %}
-<br>
-<br>
 {% endif %}
 </section>
 {% endblock content %}
