@@ -62,13 +62,15 @@
         <ul>
           {% if DISPLAY_PAGES_ON_MENU %}
           {% for p in pages %}
+          {% if p.title != "Impressum" %}
           <li class="w3-bottombar w3-border-white w3-hover-border-red {% if p==page %} active{% endif %}"><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+          {% endif %}
           {% endfor %}
           {% endif %}
           {% if DISPLAY_CATEGORIES_ON_MENU %}
           {% for cat, null in categories %}
           {% if cat != DEFAULT_CATEGORY %}
-          <li class="w3-bottombar w3-border-white w3-hover-border-red" {% if cat == category %}style="font-weight: bold;"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+          <li class="w3-bottombar w3-border-white w3-hover-border-red {% if cat == category %} active{% endif %}"><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
           {% endif %}
           {% endfor %}
           {% endif %}
@@ -98,11 +100,10 @@
                 </ul>
             </div>
         </div>
-    <div class="blogroll-block w3-col l3 m3 s6">
+    <!--<div class="blogroll-block w3-col l3 m3 s6">
       <div>
         <h6>Top Tags</h6>
         <ul>
-          <!-- Print the four most popular tags, sorted automatically with the setting TAG_CLOUD_SORTING = 'size' in pelicanconf.py -->
           {% for tag in tag_cloud[:4] %}
           <li class=""><a href="{{ SITEURL }}/{{ tag.0.url }}"> #{{ tag.0 }} ({{ tag.2 }})</a></li>
           {% endfor %}
@@ -111,21 +112,11 @@
           {% endfor %}
         </ul>
       </div>
-    </div>
+    </div>-->
     <div class="blogroll-block w3-col l3 m3 s6">
       <div>
-          <h6><a href="{{ SITEURL }}/authors.html">Autoren</a></h6>
-          <ul>
-              <!-- {% if authors|count > 1 %}
-              <li class=""><a href="{{ SITEURL }}/authors.html">Alle</a></li>
-              {% endif %} -->
-              {% for author, articles in authors %}
-              <li class=""><a href="{{ SITEURL }}/authors.html">{{ author }}</a></li>
-              <!-- <li class=""><a href="{{ SITEURL }}/authors.html#{{ author.page_name[7:] }}">{{ author }}</a></li> -->
-              {% endfor %} {% for number in range(4 - authors|count) %}
-              <li class="empty"></li>
-              {% endfor %}
-          </ul>
+          <h6>Blogroll</h6>
+          
       </div>
     </div>
       <div class="blogroll-block w3-col l3 m3 s6">
@@ -144,7 +135,7 @@
     </div>
     <div id="contact">
         <ul>
-            <li><a href="{{ SITEURL }}/pages/impressum.html">Impressum | Datenschutz</a></li>
+            <li><a href="{{ SITEURL }}/pages/impressum">Impressum | Datenschutz</a></li>
         </ul>
     </div>
     <div id="copyright" class="w3-center w3-small w3-text-grey w3-padding-48">
