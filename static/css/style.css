@@ -15,7 +15,7 @@ a {
   text-decoration: none;
 }
 
-article main a {
+article main a, .webmention-container a {
   color: #a81127; /*f44336*/
 }
 article main a:hover {
@@ -88,6 +88,13 @@ dt.dim + dd, dt.dim + dd + dt.dim {
 }
 
 .entry-content img {
+  max-width: 100%;
+}
+.entry-content a img {
+  max-width: 400px;
+  margin: 0 8px 8px 0;
+}
+.entry-content a img.fullwidth {
   max-width: 100%;
 }
 
@@ -412,6 +419,31 @@ div#contact ul li {
 #author-story {
   font-size: 11pt;
   font-style: italic;
+}
+
+/* Webmentions */
+.webmention-author, .webmention-summary, .webmention-published {
+  display: inline;
+}
+.webmention-author:after, .webmention-summary:after {
+  content: " ";
+}
+.webmention-author img {
+  max-width: 100px;
+  max-height: 100px;
+  margin-right: 6px;
+}
+
+.in-post-gallery label {
+  padding: 8px;
+  float: left;
+  max-height:400px;
+  max-width:400px;
+}
+
+.in-post-gallery label img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 

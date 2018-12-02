@@ -43,7 +43,7 @@
   </div>
 </header>
 <main>
-  {% if article.summary|length > 400 %}
+  {% if article.summary|length > 600 %}
   <div class="entry-content">{{article.summary}}</div>
   <footer>
   <a class="w3-btn w3-red w3-right w3-margin" href="{{ SITEURL }}/{{ article.url }}">Weiterlesen &#10093;</a>
