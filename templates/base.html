@@ -35,18 +35,16 @@
     {% endif %}
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:regular,bold|Reenie+Beanie">
+    
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/w3.css">
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/style.css">
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/jqcloud.css">
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/shariff.min.css">
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/pygments-highlight-github.css">
-
-    <link rel="webmention" href="https://webmention.herokuapp.com/api/webmention" />
-    
+  
     <!-- JavaScript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="{{ SITEURL }}/theme/js/jquery-3.6.0.min.js"></script>
     <script src="{{ SITEURL }}/theme/js/jqcloud.min.js"></script>
     {% endblock head %}
 </head>
@@ -54,10 +52,10 @@
   <div class="w3-row">
     <header id="banner" class="w3-white">
        <!-- AUTHOR INITIALS-->
-      <a href="{{ SITEURL }}" id=logo title="Home">{{ AUTHOR[0] + AUTHOR[AUTHOR.index(" ")+1] }}</a>
+      <a href="{{ SITEURL }}" id=logo title="Home"><img src="{{ SITEURL }}/theme/images/blogavatar_60px.jpg" alt="Photo of myself"></a>
       <ul class="social" style="margin: 0; margin-top: 10px; padding: 0;">
         {% for name, link in SOCIAL %}
-        <li><a class="sc-{{ name }}" href="{{ link }}" target="_blank"><i class="fa fa-{{ name }}"></i></a></li>
+        <li><a class="sc-{{ name }}" href="{{ link }}" target="_blank" rel="me"><i class="fa fa-{{ name }}"></i></a></li>
         {% endfor %}
       </ul>
       <nav id="menu">
@@ -126,7 +124,7 @@
               <h6>Social Media</h6>
               <ul>
                   {% for name, link in SOCIAL %}
-                  <li><a class="sc-{{ name }}" href="{{ link }}" target="_blank"><span style="text-transform: capitalize;">{{ name }}</span> <i class="fa fa-{{ name }}"></i></a></li>
+                  <li><a class="sc-{{ name }}" href="{{ link }}" target="_blank" rel="me"><span style="text-transform: capitalize;">{{ name }}</span> <i class="fa fa-{{ name }}"></i></a></li>
                   {% endfor %}
                   {% for number in range(4 - SOCIAL|count) %}
                   <li class="empty"></li>
