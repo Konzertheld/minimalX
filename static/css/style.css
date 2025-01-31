@@ -239,6 +239,8 @@ main div.highlight {
 main pre {
   margin: 0;
   padding: 12px;
+  font-size: 12pt;
+  background-color: #f1f1f1;
 }
 
 main p.content-highlight {
@@ -308,6 +310,12 @@ div#blogroll ul {
 
 div#blogroll ul li {
   list-style: none;
+}
+
+/* Scale figures below the width of the text column and center them */
+div.figure object {
+    width: 80%;
+    margin-left: 10%;
 }
 
 #contentinfo {
@@ -380,7 +388,7 @@ div#contact ul li {
   align-items: center;
   background-color: black;
   color: white;
-  font-size: 20pt;
+  font-size: 18pt;
   font-weight: bold;
 }
 
