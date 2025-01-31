@@ -85,72 +85,7 @@
 {% endblock %}
 {% block content %}
 {% endblock %}
-<<<<<<< HEAD
-  <footer id="contentinfo">
-    <div id="blogroll" class="w3-row">
-        <div class="blogroll-block w3-col l3 m3 s6">
-            <div>
-                <h6>Kategorien</h6>
-                <ul>
-                    {% for category, articles in categories %}
-                    <li class=""><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}<a></li>
-                    {% endfor %}
-                    {% for number in range(4 - categories|count) %}
-                    <li class="empty"></li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
-    <!--<div class="blogroll-block w3-col l3 m3 s6">
-      <div>
-        <h6>Top Tags</h6>
-        <ul>
-          {% for tag in tag_cloud[:4] %}
-          <li class=""><a href="{{ SITEURL }}/{{ tag.0.url }}"> #{{ tag.0 }} ({{ tag.2 }})</a></li>
-          {% endfor %}
-          {% for number in range(4 - tag_cloud[:4]|count) %}
-          <li class="empty"></li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>-->
-    <div class="blogroll-block w3-col l3 m3 s6">
-      <div>
-          <h6>Blogroll</h6>
-          
-      </div>
-    </div>
-      <div class="blogroll-block w3-col l3 m3 s6">
-          <div>
-              <h6>Social Media</h6>
-              <ul>
-                  {% for name, link in SOCIAL %}
-                  <li><a class="sc-{{ name }}" href="{{ link }}" target="_blank" rel="me"><span style="text-transform: capitalize;">{{ name }}</span> <i class="fa fa-{{ name }}"></i></a></li>
-                  {% endfor %}
-                  {% for number in range(4 - SOCIAL|count) %}
-                  <li class="empty"></li>
-                  {% endfor %}
-              </ul>
-          </div>
-      </div>
-    </div>
-    <div id="copyright" class="w3-center w3-small w3-text-grey w3-padding-48">
-        <span>Made with ❤️ by FK | Powered by <a href="http://getpelican.com" target="_blank"><u>Pelican</u></a> and <a href="https://github.com/art1fa/minimalX" target="_blank"><u>minimalX</u></a>{% if FEED_ALL_RSS %} | <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}">RSS <i class="fa fa-rss" aria-hidden="true"></i></a>{% endif %}
-        </span>
-        <p>
-          Datenschutzhinweis: Diese Seite erhebt und verarbeitet keine Daten. Keine. Daher auch keine Hinweise zu irgendwas. Wenn du die Seite schließt, ist es, als wärst du nie hier gewesen.
-        </p>
-    </div>
-  </footer>
-{% if GOOGLE_ANALYTICS %}
- {% include "ga.html" %}
-{% endif %}
-{% if PIWIK_URL and PIWIK_SITE_ID %}
-  {% include "piwik.html" %}
-{% endif %}
-=======
 {# include 'footer.html' #}
->>>>>>> e8ce9e1f3f00efb3d6f50b48f9585bb6ba5f63ac
 <script src="{{ SITEURL }}/theme/js/shariff.min.js"></script>
 </body>
 </html>
