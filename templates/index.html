@@ -32,7 +32,7 @@
     {% if article.tags %}
     <div class="w3-margin-right w3-margin-bottom article-tags">
       {% for tag in article.tags %}
-      <span class="w3-tag w3-light-grey w3-text-red w3-hover-red">
+      <span class="w3-tag w3-green w3-text-white w3-hover-green">
         <a href="{{ SITEURL }}/{{ tag.url }}" title="Alle Posts zum Thema {{ tag.name.title() }}">#{{ tag }}</a>
       </span>
       {% endfor %}

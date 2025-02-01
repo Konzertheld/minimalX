@@ -63,19 +63,19 @@
           {% if DISPLAY_PAGES_ON_MENU %}
           {% for p in pages %}
           {% if p.title != "Impressum" %}
-          <li class="w3-bottombar w3-border-white w3-hover-border-red {% if p==page %} active{% endif %}"><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+          <li class="w3-bottombar w3-border-green w3-hover-border-red {% if p==page %} active{% endif %}"><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
           {% endif %}
           {% endfor %}
           {% endif %}
           {% if DISPLAY_CATEGORIES_ON_MENU %}
           {% for cat, null in categories %}
           {% if cat != DEFAULT_CATEGORY %}
-          <li class="w3-bottombar w3-border-white w3-hover-border-red {% if cat == category %} active{% endif %}"><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+          <li class="w3-bottombar w3-border-green w3-hover-border-red {% if cat == category %} active{% endif %}"><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
           {% endif %}
           {% endfor %}
           {% endif %}
           {% for title, link in MENUITEMS %}
-          <li class="w3-bottombar w3-border-white w3-hover-border-red"><a href="{{ link }}">{{ title }}</a></li>
+          <li class="w3-bottombar w3-border-green w3-hover-border-red"><a href="{{ link }}">{{ title }}</a></li>
           {% endfor %}
         </ul>
       </nav>
